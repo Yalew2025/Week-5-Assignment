@@ -5,20 +5,20 @@ Add attributes and methods to bring the class to life!
 Use constructors to initialize each object with unique values.
 Add an inheritance layer to explore polymorphism or encapsulation.
 
-##Answers
-# Encapsulation 
+## Answers
+# step1: Encapsulation 
 class FarmAnimal:
     def __init__(self, name, age):
         self._name = name
         self._age = age
-# Polymorphism 
+# Step2: Polymorphism 
     def make_sound(self):
         return "Some sound"
     
     def get_info(self):
         return f"{self._name}, {self._age} years"
         
-# Inheritance 
+#Step3:Inheritance 
 class Cow(FarmAnimal):
     def make_sound(self):
         return "Moo!"
@@ -39,7 +39,8 @@ class Sheep(FarmAnimal):
     def make_sound(self):
         return "Baa!"
 
-# Demonstration
+# 
+Step4: Demonstration
 animals = [
     Cow("Bessie", 3), 
     Chicken("Clucky", 1),
@@ -56,6 +57,7 @@ for animal in animals:
 
 Create a program that includes animals or vehicles with the same action (like move()). However, make each class define move() differently (for example, Car.move() prints "Driving" 🚗, while Plane.move() prints "Flying" ✈️).
 
+# Answer 
 class Animal:
     def move(self):
         raise NotImplementedError("Subclasses must implement this method.")
