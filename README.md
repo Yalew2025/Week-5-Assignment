@@ -1,5 +1,5 @@
 ### Week-5-Assignment
-Assignment 1: Design Your Own Class! 🏗️
+## Assignment 1: Design Your Own Class! 🏗️
 Create a class representing anything you like (a Smartphone, Book, or even a Superhero!).
 Add attributes and methods to bring the class to life!
 Use constructors to initialize each object with unique values.
@@ -50,3 +50,39 @@ animals = [
 
 for animal in animals:
     print(f"{animal.get_info()} says: {animal.make_sound()}")
+
+
+## Activity 2: Polymorphism Challenge! 🎭 
+
+Create a program that includes animals or vehicles with the same action (like move()). However, make each class define move() differently (for example, Car.move() prints "Driving" 🚗, while Plane.move() prints "Flying" ✈️).
+
+class Animal:
+    def move(self):
+        raise NotImplementedError("Subclasses must implement this method.")
+
+ class Frog(Animal):
+    def move(self):
+        return "Jumping"
+
+class Snake(Animal):
+    def move(self):
+        return "Slithering"
+
+class Rat(Animal):
+    def move(self):
+        return "Scurrying"
+
+class Cat(Animal):
+    def move(self):
+        return "Prowling"
+
+class Dog(Animal):
+    def move(self):
+        return "Running"
+   # List of animal instances
+animals = [Frog(), Snake(), Rat(), Cat(), Dog()]
+
+# Invoke the move method for each animal
+for animal in animals:
+    print(f"{animal.__class__.__name__}: {animal.move()}")
+
